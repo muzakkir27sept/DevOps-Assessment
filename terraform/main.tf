@@ -1,13 +1,9 @@
-resource "aws_ecs_cluster" "notification_cluster" {
-  name = "notification-cluster"
-}
-
-# Create an ECR repository for the Notification API
+# ECR repository for the Notification API
 resource "aws_ecr_repository" "notification_api" {
   name = "notification-api"
 }
 
-# Create an ECR repository for the Email Sender service
+# ECR repository for the Email Sender service
 resource "aws_ecr_repository" "email_sender" {
   name = "email-sender"
 }
